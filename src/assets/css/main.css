@@ -488,7 +488,7 @@ html {
 }
 
 html {
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 html,
 body {

@@ -1,5 +1,11 @@
 import React from 'react';
+import { AuthContainerLayout, PageLayout } from '../../lib/elements/layout';
+import { SignupContainer } from './signup.container';
 
 export function SignupPage() {
-  return <h1>Signup page</h1>
+  return (
+    <PageLayout>
+      <SignupContainer />
+    </PageLayout>
+  );
 }

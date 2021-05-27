@@ -1,14 +1,15 @@
 {
-    "SIGNUP_FORM": {
-        "FIELD": {
-            "LOGIN": {
-                "TITLE": "Login",
-                "PLACEHOLDER": "Your login"
-            },
-            "PASSWORD": {
-                "TITLE": "Password",
-                "PLACEHOLDER": "Your password"
-            }
-        }
+  "SIGNUP_FORM": {
+    "TITLE_FORM": "Регистрация",
+    "FIELD": {
+      "LOGIN": {
+        "TITLE": "Login",
+        "PLACEHOLDER": "Your login"
+      },
+      "PASSWORD": {
+        "TITLE": "Password",
+        "PLACEHOLDER": "Your password"
+      }
     }
+  }
 }
