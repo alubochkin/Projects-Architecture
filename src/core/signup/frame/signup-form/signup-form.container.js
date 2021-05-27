@@ -1,52 +1,33 @@
 import React from 'react';
 import { Formik } from 'formik';
+import { SignupFormComponent } from './signup-form.component';
+import { SIGNUP_FORM_FIELD_KEY } from './signup-form.type';
+import {
+  AuthContainerLayout,
+  ContentLayout,
+} from '../../../../lib/elements/layout';
 
-const Basic = () => (
-  <div>
-    <h1>Anywhere in your app!</h1>
-    <Formik
-      initialValues={{ email: '', password: '' }}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
-      }}
-    >
-      {({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        isSubmitting,
-        /* and other goodies */
-      }) => (
-        <form onSubmit={handleSubmit}>
-          <input
-            type="email"
-            name="email"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.email}
-          />
-          {errors.email && touched.email && errors.email}
-          <input
-            type="password"
-            name="password"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            value={values.password}
-          />
-          {errors.password && touched.password && errors.password}
-          <button type="submit" disabled={isSubmitting}>
-            Submit
-          </button>
-        </form>
-      )}
-    </Formik>
-  </div>
-);
+export function SignupFormContainer(props) {
+  const LOGIN_NAME = props.fieldName[SIGNUP_FORM_FIELD_KEY.LOGIN];
+  const PASSWORD_NAME = props.fieldName[SIGNUP_FORM_FIELD_KEY.PASSWORD];
 
-export default Basic;
+  return (
+    <ContentLayout>
+      <AuthContainerLayout>
+        <Formik
+          onSubmit={props.onSubmitForm}
+          initialValues={props.initialValue}
+          validate={props.validation}
+        >
+          {(props) => (
+            <SignupFormComponent
+              fieldLogin={LOGIN_NAME}
+              fieldPassword={PASSWORD_NAME}
+              {...props}
+            />
+          )}
+        </Formik>
+      </AuthContainerLayout>
+    </ContentLayout>
+  );
+}
