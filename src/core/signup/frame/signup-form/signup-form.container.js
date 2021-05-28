@@ -12,22 +12,20 @@ export function SignupFormContainer(props) {
   const PASSWORD_NAME = props.fieldName[SIGNUP_FORM_FIELD_KEY.PASSWORD];
 
   return (
-    <ContentLayout>
-      <AuthContainerLayout>
-        <Formik
-          onSubmit={props.onSubmitForm}
-          initialValues={props.initialValue}
-          validate={props.validation}
-        >
-          {(props) => (
-            <SignupFormComponent
-              fieldLogin={LOGIN_NAME}
-              fieldPassword={PASSWORD_NAME}
-              {...props}
-            />
-          )}
-        </Formik>
-      </AuthContainerLayout>
-    </ContentLayout>
+    <AuthContainerLayout>
+      <Formik
+        onSubmit={props.onSubmitForm}
+        initialValues={props.initialValue}
+        validate={props.validation}
+      >
+        {(props) => (
+          <SignupFormComponent
+            fieldLogin={LOGIN_NAME}
+            fieldPassword={PASSWORD_NAME}
+            {...props}
+          />
+        )}
+      </Formik>
+    </AuthContainerLayout>
   );
 }

@@ -3,10 +3,14 @@ import { SIGNUP_FORM_FIELD_NAME } from './signup.type';
 import { SIGNUP_FORM_FIELD_KEY } from './frame/signup-form';
 import { SignupFormContainer } from './frame/signup-form';
 import { SignupFormValidation } from './signup.validation';
+import { useDispatch } from 'react-redux';
+import { signupFormUploadData } from './singup.action';
 
 export function SignupContainer() {
+  const dispatch = useDispatch();
+
   const signupFormSendData = (values) => {
-    console.log('signupFormSendData', values);
+    dispatch(signupFormUploadData(values));
   };
 
   const signupFormGetInitialValues = () => {
