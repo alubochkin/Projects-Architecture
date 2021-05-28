@@ -1,11 +1,14 @@
 import React from 'react';
-import { AuthContainerLayout, PageLayout } from '../../lib/elements/layout';
+import { ContentLayout, PageLayout } from '../../lib/elements/layout';
+import { SignupComponent } from './signup.component';
 import { SignupContainer } from './signup.container';
 
 export function SignupPage() {
   return (
     <PageLayout>
-      <SignupContainer />
+      <ContentLayout>
+        <SignupComponent />
+      </ContentLayout>
     </PageLayout>
   );
 }

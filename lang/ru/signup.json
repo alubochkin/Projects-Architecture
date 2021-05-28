@@ -1,6 +1,24 @@
 {
   "SIGNUP_FORM": {
     "TITLE_FORM": "Регистрация",
+    "TOGGLE_FORM": {
+      "SIGN_IN": "Войти?",
+      "FORGET_PASSWORD": "Забыли пароль?"
+    },
+    "FIELD": {
+      "LOGIN": {
+        "TITLE": "Login",
+        "PLACEHOLDER": "Your login"
+      },
+      "PASSWORD": {
+        "TITLE": "Password",
+        "PLACEHOLDER": "Your password"
+      }
+    }
+  },
+
+  "SIGNIN_FORM": {
+    "TITLE_FORM": "Войти",
     "FIELD": {
       "LOGIN": {
         "TITLE": "Login",

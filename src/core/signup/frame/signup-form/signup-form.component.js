@@ -70,6 +70,12 @@ export function SignupFormComponent(props) {
       <ButtonSubmit type="submit" disabled={isSubmitting}>
         Submit
       </ButtonSubmit>
+      <BlockBottomAction>
+        <a href="">{RU.translation.SIGNUP.SIGNUP_FORM.TOGGLE_FORM.SIGN_IN}</a>
+        <a href="">
+          {RU.translation.SIGNUP.SIGNUP_FORM.TOGGLE_FORM.FORGET_PASSWORD}
+        </a>
+      </BlockBottomAction>
     </Form>
   );
 }
@@ -79,6 +85,12 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: ${spacing(3)};
+`;
+
+const BlockBottomAction = styled.div`
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
 `;
 
 const Label = styled.label`
